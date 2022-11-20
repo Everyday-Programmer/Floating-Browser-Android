@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15sp"
+    app:cardBackgroundColor="@color/white"
+    android:id="@+id/root"
+    android:padding="10sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp">
+
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_baseline_language_24"
+            android:id="@+id/imageView"
+            app:tint="?attr/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500sp"
+            android:id="@+id/browserLayout"
+            android:layout_marginTop="5sp"
+            android:layout_below="@id/imageView"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:orientation="horizontal"
+                android:id="@+id/controlsLayout">
+
+                <ImageButton
+                    android:layout_width="0sp"
+                    android:layout_height="30sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_aspect_ratio_24"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/fullscreen"/>
+
+                <ImageButton
+                    android:layout_width="0sp"
+                    android:layout_height="30sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/back"/>
+
+                <ImageButton
+                    android:layout_width="0sp"
+                    android:layout_height="30sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_refresh_24"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/reload"/>
+
+                <ImageButton
+                    android:layout_width="0sp"
+                    android:layout_height="30sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/forward" />
+
+                <ImageButton
+                    android:layout_width="0sp"
+                    android:layout_height="30sp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_baseline_close_24"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/close"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:indeterminate="true"
+                android:id="@+id/progress"/>
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusedByDefault="true"
+                android:id="@+id/webView"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
